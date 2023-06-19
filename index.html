@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/x-icon" href="img/3_enemies_chicken/chicken_small/1_walk/1_w.png">
+    <script src="./models/drawable-object.class.js"></script>
+    <script src="./models/moveable-object.class.js"></script>
+    <script src="./models/cloud.class.js"></script>
+    <script src="./models/character.class.js"></script>
+    <script src="./models/chicken.class.js"></script>
+    <script src="./models/smallchicken.class.js"></script>
+    <script src="./models/status-bar.class.js"></script>
+    <script src="./models/statusbar-bottle.class.js"></script>
+    <script src="./models/statusbar-coins.class.js"></script>
+    <script src="./models/statusbar-endboss.class.js"></script>
+    <script src="./models/statusbar-endboss-icon.class.js"></script>
+    <script src="./models/world.class.js"></script>
+    <script src="./models/background-object.class.js"></script>
+    <script src="./models/keyboard.class.js"></script>
+    <script src="./models/throwable-object.class.js"></script>
+    <script src="./models/bottle.class.js"></script>
+    <script src="./models/bottle1.class.js"></script>
+    <script src="./models/coins.class.js"></script>
+    <script src="./models/level.class.js"></script>
+    <script src="./models/endboss.class.js"></script>
+    <script src="./level/level1.js"></script>
+    <script src="./js/game.js"></script>
+</head>
+
+<body>
+    <h1>El pollo loco</h1>
+
+    <div id="content" class="content">
+        <canvas id="canvas" width="780px" height="480px"></canvas>
+        <div id="rightButtons" class="rightButtons">
+            <img onclick="showControlls()" id="controller" class="controller" src="./img/controller.png">
+            <img onclick="toggleSound()" id="volume" class="volume" src="./img/volume.png">
+            <img onclick="toggleSound()" id="mute" class="mute d-none" src="./img/mute.png">
+            <img onclick="fullScreen()" class="fullscreen" src="./img/fullscreen.png">
+        </div>
+        <div id="startScreen" class="startScreen">
+            <img class="startScreenImage" src="img/9_intro_outro_screens/start/startscreen_1.png">
+            <div class="buttonClass">
+                <button id="startButton" class="startButton" onclick="startGame()">START GAME</button>
+            </div>
+        </div>
+        <div id="restartDiv" class="restartDiv d-none">
+            <img class="restartDivImage" src="img/you-won.png">
+            <h2 class="winHeadline">YOU WON!</h2>
+            <button onclick="startGame()" class="restartButton">RESTART GAME</button>
+        </div>
+        <div id="restartDivLose" class="restartDivLose d-none">
+            <img class="restartDivLoseImage" src="img/9_intro_outro_screens/game_over/game over.png">
+            <button onclick="startGame()" class="restartButtonLose">RESTART GAME</button>
+        </div>
+        <div id="controllerDiv" class="controllerDiv d-none">
+            <img onclick="closeControlls()" class="closeImage" src="img/cross.png">
+            <div class="controllerButtons">
+                <p>SPACE = JUMP</p>
+                <p>RIGHT = WALK RIGHT</p>
+                <p>LEFT = WALK LEFT</p>
+                <p>D = THROW BOTTLE</p>
+            </div>
+            <div class="explanationDiv">
+                <p>Jump on the little chickens to kill them and use the bottles to kill the endboss</p>
+            </div>
+        </div>
+        <div id="mobileButtons" class="mobileButtons d-none zIndex-1">
+            <div class="mobileButtonsLeft">
+                <img id="mobileButtonLeft" class="mobileButtonsSize" src="img/mobileButtonLeft.png">
+                <img id="mobileButtonRight" class="mobileButtonsSize" src="img/mobileButtonRight.png">
+            </div>
+            <div class="mobileButtonsRight">
+                <img id="mobileButtonJump" class="mobileButtonsSize" src="img/mobileButtonJump.png">
+                <img id="mobileButtonThrow" class="mobileButtonsSize" src="img/mobileButtonThrow.png">
+            </div>
+        </div>
+        <div class="rotatePhone d-none">
+            <img src="img/rotate-phone.gif">
+        </div>
+    </div>
+
+
+</body>
+
+</html>
